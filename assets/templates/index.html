@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shorter</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <div>URL Shorter</div>
+    </header>
+    <main>
+        <form class="form" method="post" action="/shorter">
+            <div class="element">
+                <h1>Insert your url</h1>
+            </div>
+            <div class="element">
+                <div class="inputs">
+                    <input id="origin_url" type="text" name="origin_url" placeholder="Enter your link here">
+                    <input id="send_origin_url" type="submit" value="Send" class="blue-btn click">
+                </div>
+            </div>
+
+            <ul class="error">
+                {{ if .Error }}
+                    <li>{{ .Error }}</li>
+                {{ end }}
+            </ul>
+        </form>
+    </main>
+</body>
+</html>

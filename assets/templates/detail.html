@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shorter</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <div>URL Shorter</div>
+    </header>
+    <main>
+        <div class="form">
+            <div class="element">
+                <h1>Your URL</h1>
+            </div>
+
+            <div class="element">
+                <div class="inputs">
+                    <input id="short_url" type="text" value="{{.URL}}" readonly>
+                    <input id="copy" type="button" value="Copy" class="blue-btn click" onclick="copy()">
+                </div>
+            </div>
+
+            <div class="element">
+                <a href="/">Back to home</a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function copy() {
+            let copyText = document.getElementById("short_url");
+            copyText.select();
+
+            navigator.clipboard.writeText(copyText.value);
+        }
+    </script>
+</body>
+</html>
