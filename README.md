@@ -3,10 +3,11 @@
 
 The service requires [docker](https://www.docker.com) for easy run this project.
 
-## Install and Run
+## Install and Run (Locally)
 1) Clone this repository: `git clone https://github.com/Gamafoot/ShortURL.git`.
 2) Change directory: `cd ShortURL`.
-3) Run the app in docker:  `docker run --name ShortURL -p 8000:8000 -d short_url` (you can change working port for this service use var enviroment: PORT)
+3) Build image: `docker build .`
+4) Run the app in docker:  `docker run --name ShortURL -p 8000:8000 -d short_url` (you can change working port for this service use var enviroment: PORT)
 
 ## Done
 Now you can use the web service in your browser: `http://localhost:8000`.
